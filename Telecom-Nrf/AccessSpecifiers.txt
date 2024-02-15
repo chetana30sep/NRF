@@ -1,0 +1,188 @@
+Access Specifier :
+ 
+ 
+ Employee {
+    public int id; 
+    String username;
+	private string password; 
+	
+	}
+	
+	Manager{
+	       Employee e = new Employee();
+		   sysout(e.password);
+	}
+	
+=================================
+4 types :
+
+1) private :
+Scope is only inside the class, not outside.
+
+class :  not allowed.
+global variable : allowed
+method : allowed
+constructor : allowed 
+local variable : not allowed 
+
+2) Default :
+accessible within same package only .
+
+class : allowed
+global variable : allowed
+method : allowed
+constructor : allowed
+constructor : allowed
+local variable: allowed. 
+
+3) public :
+
+access anywhere inside project.
+
+
+class : allowed
+global variable : allowed
+method : allowed
+constructor : allowed
+local variable : not allowed.
+
+4)protected :
+
+package com.parentdemo;
+class Animal {
+
+    void feeding(){
+	      sysout("Animal feeding");
+	}
+
+}
+
+com.childdemo;
+class Dog extends Animal {
+       
+
+}
+
+class : not allowed
+global variable : allowed
+constructor : allowed
+method: allowed 
+local variable: not allowed
+
+======================================================
+Hands On Program :
+
+1) swap two  nos .:
+
+int a = 10;
+int b= 20;
+
+sysout("after swapping a = "+a); //20
+sysout("after swapping a = "+b); //10
+
+====================================
+
+int temp ;
+
+temp = a ; temp = 10;
+a = b;  // a=20;
+b = temp; //b = 10;
+
+
+Hands On :
+1) positive , negative 
+2) even odd 
+3)write a program for 50 odd nos. /50 even nos
+4) swap two nos
+5)leap year 
+6) fibonacci series :
+
+0 1 1 2 3 5 8 13  21  34  55  89
+
+0        1         1                   2 
+a         b       c=a+b
+            a          b                c= a+b;
+			             a                  b 
+			
+int a = 0;
+int b = 1;
+
+int c;
+
+for(int i = 1 ; i<=10; i++){
+        c = a+b;// 1
+		sysout(" "+c);
+		a = b; //1
+		b=c; //2
+
+}
+
+-------------------------------------------------------------------
+
+finding factors of given no .
+
+input  = 10  => 1 , 2 , 5 , 10 
+
+10 % 1 == 0 
+10 % 2 == 0
+input%i
+10 %3 == 0 na
+10 % 4 == 0 na
+10 % 5 == 0 a
+
+10%10 == 0 a 
+
+for(int i =1 ; i<=input ; i++)
+{
+     if(input % i == 0){
+	      sysout (i);
+		  }
+}
+
+===================================================
+Factorial of given no >>
+
+5! = 5*4*3*2*1  = 120
+
+5! = 1*2*3*4*5 
+              fact *i
+step 1 : 1*1 = 1
+step 2 = 1 * 2 = 2
+step3 = 2 * 3 = 6
+step 4 = 6 * 4 = 24
+step 5 = 24 * 5 = 120
+
+int input = 5;
+int fact = 1;
+for(int i=1; i<=input; i++){
+     fact = fact * i; 
+	 }
+	 sysout(fact); //120
+	 
+//step1 : fact = 1
+step 2 : fact = 2
+step 3 : fact = 6
+step 4 : fact = 24
+step 5 : fact =120
+
+===================================
+factorial using recursion.
+static int fact = 1;
+void calculateFact(int no){
+   if(no>0){
+          fact = fact * no; //5   fact = 5*4 = 20 *3 = 60 *2 = 120 *1 = 120 
+		  calculateFact(no-1);
+		  }
+	}
+	
+main(){
+      Test t = new Test();
+      t.calculateFact(5);
+       sysout(fact);	  
+      
+
+
+}
+ 
+	 
+     
