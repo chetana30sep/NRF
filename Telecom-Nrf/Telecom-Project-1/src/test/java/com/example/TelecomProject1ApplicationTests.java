@@ -8,6 +8,7 @@ class TelecomProject1ApplicationTests {
 
 	@Test
 	void contextLoads() {
+            //second developer - offline changes
 	}
 
 }
